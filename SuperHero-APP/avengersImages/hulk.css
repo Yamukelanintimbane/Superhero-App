@@ -1,0 +1,37 @@
+ body {
+            background-color: #002200;
+            color: #fff;
+            font-family: 'Verdana', sans-serif;
+            background-image: 
+                radial-gradient(circle at center, #00aa00 0%, #002200 100%);
+        }
+        #menu {
+            background: linear-gradient(90deg, #002200, #007700, #00aa00);
+            border-bottom: 3px solid #00ff00;
+        }
+        .gallery img {
+            border: 5px solid #00ff00;
+            border-radius: 15px;
+            box-shadow: 0 0 30px #00aa00;
+            filter: contrast(120%) brightness(110%);
+        }
+        h2 {
+            color: #00ff00;
+            text-align: center;
+            font-size: 3em;
+            text-shadow: 0 0 20px #00aa00;
+            font-family: 'Impact', sans-serif;
+        }
+        h4 {
+            color: #99ff99;
+            border-bottom: 3px solid #00ff00;
+        }
+        .abilities li:before {
+            content: "💪";
+            color: #00ff00;
+        }
+        blockquote {
+            font-style: italic;
+            color: #00ff00;
+            border-left: 4px solid #00ff00;
+        }

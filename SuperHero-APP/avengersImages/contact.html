@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SuperHero App</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        .contact-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contact-header h1 {
+            font-size: 2.5em;
+            color: #1a1a4a;
+            margin-bottom: 20px;
+        }
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .contact-form h2, .contact-info h2 {
+            color: #e63946;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        .form-group textarea {
+            height: 150px;
+        }
+        .submit-btn {
+            background: #e63946;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            background: #c1121f;
+            transform: translateY(-2px);
+        }
+        .info-item {
+            margin-bottom: 20px;
+        }
+        .info-item h3 {
+            color: #1a1a4a;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <a href="index.html" class="logo">SuperHero App</a>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>Have questions about your favorite heroes? Get in touch!</p>
+        </div>
+        
+        <div class="contact-content">
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hero">Favorite Avenger</label>
+                        <input type="text" id="hero">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <h2>Our Information</h2>
+                <div class="info-item">
+                    <h3>Avengers Headquarters</h3>
+                    <p>200 Park Avenue, New York, NY</p>
+                </div>
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p>info@superheroapp.com</p>
+                </div>
+                <div class="info-item">
+                    <h3>Phone</h3>
+                    <p>+1 (555) 616-1999</p>
+                </div>
+                <div class="info-item">
+                    <h3>Emergency Contact</h3>
+                    <p>For world-threatening emergencies, press the red button in your nearest Stark Industries device</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

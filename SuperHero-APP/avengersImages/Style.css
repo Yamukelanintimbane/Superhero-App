@@ -1,0 +1,319 @@
+/* ===== BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* ===== UNIVERSAL NAVIGATION ===== */
+#menu {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 25px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+#menu a.logo {
+    font-size: 24px;
+    font-weight: 800;
+    margin-right: auto;
+    color: #ffd700;
+}
+
+#menu a:hover {
+    color: #ffd700;
+    transform: translateY(-2px);
+}
+
+/* ===== HERO GALLERY GRID ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.gallery a {
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.gallery a:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.gallery img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.gallery a:hover img {
+    transform: scale(1.1);
+}
+
+/* ===== HERO-SPECIFIC OVERLAYS ===== */
+.gallery a::after {
+    content: attr(href);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery a:hover::after {
+    opacity: 1;
+}
+
+/* ===== INDIVIDUAL HERO THEME VARIABLES ===== */
+/* Thor */
+.avenger-1 {
+    --primary: #1a1a4a;
+    --secondary: #ffcc00;
+    --accent: #8a8aff;
+}
+
+/* Iron Man */
+.avenger-2 {
+    --primary: #600;
+    --secondary: #ff5500;
+    --accent: #f00;
+}
+
+/* Hulk */
+.avenger-3 {
+    --primary: #002200;
+    --secondary: #00ff00;
+    --accent: #00aa00;
+}
+
+/* Hawkeye */
+.avenger-4 {
+    --primary: #1a237e;
+    --secondary: #b22222;
+    --accent: #5c6bc0;
+}
+
+/* Captain America */
+.avenger-5 {
+    --primary: #1d3557;
+    --secondary: #e63946;
+    --accent: #f1faee;
+}
+
+/* Black Widow */
+.avenger-6 {
+    --primary: #111;
+    --secondary: #b22222;
+    --accent: #8b0000;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    #menu {
+        padding: 0 15px;
+        height: 50px;
+    }
+    
+    #menu a {
+        font-size: 16px;
+        margin-right: 15px;
+    }
+    
+    #menu a.logo {
+        font-size: 20px;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery img {
+        height: 300px;
+    }
+}
+/* ===== FOOTER STYLES ===== */
+.super-footer {
+    background: linear-gradient(135deg, #1a1a4a 0%, #0a0a2a 100%);
+    color: white;
+    padding: 40px 0 0;
+    margin-top: 60px;
+    border-top: 3px solid #ffd700;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    color: #ffd700;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #e63946;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffd700;
+    padding-left: 5px;
+}
+
+.shield-btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.shield-btn:hover {
+    background: #ffd700;
+    color: #1a1a4a;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.disclaimer {
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffd700;
+    transform: translateY(-3px);
+}
+
+/* Font Awesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-section ul li a:hover {
+        padding-left: 0;
+    }
+}
